@@ -76,7 +76,7 @@ a {
       padding: 0;
       justify-content: space-between;
       width: 50%;
-      margin-left: 30px;
+      margin-left: 0;
       opacity: 0.3;
     }
     .caps {
@@ -104,6 +104,23 @@ a {
   color: #ffffff;
   @media screen and (max-width: 810px) {
     font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 34px;
+  }
+}
+
+.topic-font {
+  font-family: Kaushan Script;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 69px;
+  text-align: center;
+  color: #ffffff;
+  @media screen and (max-width: 810px) {
+    font-family: Kaushan Script;
     font-style: normal;
     font-weight: 600;
     font-size: 21px;
@@ -142,7 +159,7 @@ a {
   .line {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-left: -10px;
     margin-right: -10px;
     @media screen and (max-width: 1110px) {
@@ -325,15 +342,16 @@ a {
 
 .banner {
   display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
   .grey-line {
     background: #e7e7f0;
     height: 5px;
     width: 50%;
-    margin-top: 9px;
   }
   .caption {
-    white-space: nowrap;
-    margin: 0 100px;
+    margin: 0 10px;
   }
 }
 
@@ -354,13 +372,11 @@ a {
 }
 
 .table-total {
-  margin-top: 30px;
   margin-bottom: 50px;
   @media screen and (max-width: 1100px) {
     display: none;
   }
   .d-table {
-    display: table;
     width: 100%;
     border-collapse: collapse;
     .table-body {
@@ -381,11 +397,11 @@ a {
       }
     }
     .d-tr {
-      display: table-row;
+      display: flex;
       height: 59px;
       border-radius: 30px;
+      margin-top: 20px;
       .d-td {
-        display: table-cell;
         text-align: center;
         border: none;
         vertical-align: middle;
@@ -463,23 +479,23 @@ a {
     .dot {
       margin-top: 4px;
     }
-    .arrow-down {
-      position: absolute;
-      right: 45px;
-      top: 25px;
-      .part {
-        width: 1px;
-        height: 10px;
-        background-color: #fff;
-        position: absolute;
-        &-1 {
-          transform: rotate(-45deg);
-          left: -7px;
-        }
-        &-2 {
-          transform: rotate(45deg);
-        }
-      }
+  }
+}
+.arrow-down {
+  position: absolute;
+  right: 45px;
+  top: 25px;
+  .part {
+    width: 1px;
+    height: 10px;
+    background-color: #fff;
+    position: absolute;
+    &-1 {
+      transform: rotate(-45deg);
+      left: -7px;
+    }
+    &-2 {
+      transform: rotate(45deg);
     }
   }
 }
@@ -568,6 +584,172 @@ p.sausage {
   margin: 15px 0;
 }
 
+.seasons {
+  width: 100%;
+  background: #f6f6fb;
+  border-radius: 24px;
+  max-height: 780px;
+  position: relative;
+  margin-top: 30px;
+  padding: 13px;
+  display: none;
+  @media screen and (max-width: 1100px) {
+    display: inline;
+  }
+  .small-sausage-season {
+    .avatar {
+      position: absolute;
+      top: -2px;
+      left: -16px;
+      z-index: 1;
+    }
+    img {
+      width: 70px;
+      box-shadow: 0px 5px 10px rgba(26, 30, 56, 0.2);
+      border-radius: 48px;
+      border: 2px solid #fff;
+    }
+  }
+
+  .base {
+    box-shadow: 0px 4px 12px #e8e9eb;
+    border-radius: 48px;
+    height: 47px;
+    margin-right: -13px;
+    margin-top: -13px;
+    position: relative;
+    width: 100%;
+    &-red {
+      background: #f44a4f;
+    }
+    &-blue {
+      background-color: #25c3f2;
+    }
+    &-yellow {
+      background-color: #ffc544;
+    }
+    .name {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      p {
+        font-family: Kaushan Script;
+        font-weight: 500;
+        font-size: 22px;
+        align-items: center;
+        color: #fff;
+        margin-top: 6px;
+      }
+    }
+    .arrow-down {
+      top: 20px;
+    }
+  }
+  .season {
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    &-red {
+      p {
+        color: #f44a4f;
+      }
+    }
+    &-blue {
+      p {
+        color: #25c3f2;
+      }
+    }
+    &-yellow {
+      p {
+        color: #ffc544;
+      }
+    }
+    p {
+      margin: 0 auto;
+      font-family: Poppins;
+      font-weight: bold;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+  }
+  .sausage-season {
+    background-color: #fff;
+    box-sizing: border-box;
+    border-radius: 24px;
+    height: 41px;
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px 24px;
+    position: relative;
+    &-red {
+      border: 1px solid #f44a4f;
+    }
+    &-blue {
+      border: 1px solid #25c3f2;
+    }
+    &-yellow {
+      border: 1px solid #ffc544;
+    }
+    .arrow-up {
+      position: absolute;
+      right: 45px;
+      top: 24px;
+      transform: rotate(180deg);
+      .part {
+        width: 1px;
+        height: 10px;
+        position: absolute;
+        &-1 {
+          transform: rotate(-45deg);
+          left: -7px;
+        }
+        &-2 {
+          transform: rotate(45deg);
+        }
+        &-1-red {
+          background-color: #f44a4f;
+        }
+        &-2-red {
+          background-color: #f44a4f;
+        }
+        &-1-blue {
+          background-color: #25c3f2;
+        }
+        &-2-blue {
+          background-color: #25c3f2;
+        }
+        &-1-yellow {
+          background-color: #ffc544;
+        }
+        &-2-yellow {
+          background-color: #ffc544;
+        }
+      }
+    }
+  }
+  .drinks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .name {
+      display: flex;
+      align-items: center;
+      .dot {
+        margin-right: 10px;
+      }
+    }
+    p {
+      font-family: Poppins;
+      font-weight: 500;
+      font-size: 16px;
+      color: #373258;
+    }
+  }
+}
+
 .character {
   @media screen and (max-width: 1100px) {
     display: none;
@@ -623,60 +805,74 @@ p.sausage {
         color: #fff;
         p {
           margin: 0 auto;
+          font-family: Poppins;
+          font-weight: bold;
+          font-size: 14px;
+          text-transform: uppercase;
+          &-red {
+            color: #f44a4f;
+          }
+          &-blue {
+            color: #25c3f2;
+          }
+          &-yellow {
+            color: #ffc544;
+          }
         }
       }
     }
   }
+}
 
-  .grey {
-    background: #f6f6fb;
-    border-radius: 72px;
-    margin-top: 13px;
-    height: 60px;
-    padding: 15px 20px;
+.grey {
+  background: #f6f6fb;
+  border-radius: 72px;
+  margin-top: 13px;
+  height: 60px;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  p {
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 13px;
+    color: #373258;
+    margin: 0;
+    white-space: nowrap;
+  }
+  .numbers {
     display: flex;
-    justify-content: space-between;
-    p {
-      font-family: Poppins;
-      font-weight: 500;
-      font-size: 13px;
-      color: #373258;
-      margin: 0;
-    }
-    .numbers {
-      display: flex;
-      background-color: #fff;
-      box-shadow: 0px 4px 12px rgba(27, 31, 54, 0.05);
-      border-radius: 24px;
-      padding: 6px 20px;
-      height: 32px;
-      width: 100%;
-      max-width: 16%;
+    background-color: #fff;
+    box-shadow: 0px 4px 12px rgba(27, 31, 54, 0.05);
+    border-radius: 24px;
+    padding: 6px 20px;
+    height: 32px;
+    width: 100%;
+    max-width: 16%;
 
-      .dot {
-        margin: 5px;
-      }
+    .dot {
+      margin: 5px;
     }
-    .quantity {
-      margin-top: 8px;
+  }
+  .quantity {
+    margin-top: 8px;
+  }
+  .summer {
+    background-color: #f44a4f;
+    box-shadow: 0px 4px 12px rgba(27, 31, 54, 0.05);
+    border-radius: 24px;
+    padding: 6px;
+    width: 100%;
+    max-width: 8%;
+    text-align: center;
+    &-blue {
+      background-color: #25c3f2;
     }
-    .summer {
-      background-color: #f44a4f;
-      box-shadow: 0px 4px 12px rgba(27, 31, 54, 0.05);
-      border-radius: 24px;
-      padding: 6px;
-      width: 100%;
-      max-width: 8%;
-      text-align: center;
-      &-blue {
-        background-color: #25c3f2;
-      }
-      &-yellow {
-        background: #fabc16;
-      }
-      p {
-        color: #fff;
-      }
+    &-yellow {
+      background: #fabc16;
+    }
+    p {
+      color: #fff;
     }
   }
 }
@@ -702,21 +898,33 @@ p.sausage {
   margin-bottom: 0;
 
   .erik-icon {
+    @media screen and (max-width: 1100px) {
+      margin-top: 5px;
+    }
     img {
       border-radius: 100px;
       border: 3px solid #ffc544;
       width: 122px;
       box-shadow: 0px 5px 10px rgba(26, 30, 56, 0.2);
+      @media screen and (max-width: 1100px) {
+        width: 83px;
+      }
     }
   }
   .desckiption {
     padding: 10px 20px;
     position: relative;
+    @media screen and (max-width: 1100px) {
+      padding: 0 12px;
+    }
     p {
       font-family: Poppins;
       font-size: 16px;
       color: #9693a8;
       margin: 0 0 10px;
+      @media screen and (max-width: 1100px) {
+        font-size: 14px;
+      }
     }
     h5 {
       font-family: Kaushan Script;
@@ -724,11 +932,23 @@ p.sausage {
       line-height: 20px;
       color: #373258;
       margin: 0;
+      @media screen and (max-width: 1100px) {
+        font-size: 22px;
+      }
     }
     .pen {
       position: absolute;
       left: 225px;
       top: 12px;
+      @media screen and (max-width: 1100px) {
+        left: 132px;
+        top: 13px;
+      }
+      img {
+        @media screen and (max-width: 1100px) {
+          width: 36px;
+        }
+      }
     }
     .blue-field {
       background-color: #02b2e7;
@@ -740,6 +960,11 @@ p.sausage {
       align-items: center;
       margin-top: 23px;
       padding: 4px 20px;
+      @media screen and (max-width: 1100px) {
+        width: 152px;
+        padding: 2px;
+        margin-top: 12px;
+      }
       .dot {
         margin: 8px;
       }
@@ -747,6 +972,10 @@ p.sausage {
         margin: 0;
         color: #fff;
         font-size: 13px;
+        @media screen and (max-width: 1100px) {
+          font-size: 12px;
+          white-space: nowrap;
+        }
         span {
           font-weight: bold;
           text-decoration-line: underline;
@@ -759,6 +988,9 @@ p.sausage {
   background-color: #f6f6f6;
   border-radius: 15px;
   margin-bottom: 80px;
+  @media screen and (max-width: 1100px) {
+    margin-bottom: 20px;
+  }
 }
 .comments {
   background-color: #fff;
@@ -775,7 +1007,7 @@ p.sausage {
 .line {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: #fff;
   border-radius: 0 0 15px 15px;
   padding-bottom: 30px;
@@ -799,7 +1031,7 @@ p.sausage {
     }
     @media screen and (max-width: 380px) {
       width: 260px;
-      height: 71px;
+      //   height: 71px;
     }
     p {
       font-family: Poppins;
@@ -905,6 +1137,9 @@ p.sausage {
     margin: 0 15px;
     img {
       width: 110px;
+      @media screen and (max-width: 1100px) {
+        width: 71px;
+      }
     }
   }
 }
@@ -912,6 +1147,9 @@ p.sausage {
 footer {
   margin-top: 96px;
   background: #051630;
+  @media screen and (max-width: 1100px) {
+    margin-top: 50px;
+  }
   p {
     font-family: Poppins;
     font-style: normal;
@@ -925,16 +1163,35 @@ footer {
   display: flex;
   padding-top: 80px;
   justify-content: space-between;
+  @media screen and (max-width: 1100px) {
+    display: block;
+    justify-content: center;
+  }
   .footer-part-1 {
     display: flex;
-
+    @media screen and (max-width: 1100px) {
+      display: block;
+      justify-content: center;
+    }
     .footer-logo {
       margin-right: 45px;
+      @media screen and (max-width: 1100px) {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        img {
+          width: 174px;
+        }
+      }
       img {
         width: 174px;
       }
     }
     .copy {
+      @media screen and (max-width: 1100px) {
+        width: 170px;
+        margin: 10px auto 0;
+      }
       p {
         color: #ffffff;
         opacity: 0.5;
@@ -942,6 +1199,13 @@ footer {
         line-height: 21px;
         font-family: Poppins;
         margin: 5px 0 0 0;
+        @media screen and (max-width: 1100px) {
+          opacity: 1;
+          text-align: center;
+          margin-bottom: 10px;
+        }
+      }
+      .write-up {
       }
     }
   }
@@ -949,6 +1213,9 @@ footer {
 
 .footer-part-2 {
   display: flex;
+  @media screen and (max-width: 1100px) {
+    display: inline;
+  }
   .button-sources {
     border: 1px solid #fff;
     width: 170px;
@@ -957,6 +1224,10 @@ footer {
     position: relative;
     padding: 6px 33px;
     margin-right: 30px;
+    @media screen and (max-width: 1100px) {
+      margin-bottom: 21px;
+      width: 100%;
+    }
     p {
       font-family: Poppins;
       font-size: 16px;
@@ -980,6 +1251,9 @@ footer {
     }
     .arrow-down {
       display: flex;
+      position: absolute;
+      right: 0px;
+      top: 0px;
       .part {
         width: 1px;
         height: 11px;
@@ -1010,20 +1284,71 @@ footer {
   padding: 13px 15px;
   display: flex;
   margin-bottom: 55px;
-
+  position: relative;
+  @media screen and (max-width: 1100px) {
+    display: block;
+    height: auto;
+    background-color: #051630;
+    margin-bottom: 0;
+  }
   p {
     font-family: Poppins;
     font-weight: 600;
     font-size: 14px;
     color: #ffffff;
-    margin: 0px 15px;
+    text-align: center;
+    white-space: nowrap;
+    margin: 5px 25px;
+    @media screen and (max-width: 1100px) {
+      margin-bottom: 10px;
+    }
   }
-  input {
-    height: 37px;
-    width: 966px;
-    font-size: 15px;
-    color: #463d3d;
-    font-family: Poppins;
+  .button-up {
+    display: flex;
+    background-color: #0d2446;
     border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    display: none;
+    @media screen and (max-width: 1100px) {
+      display: block;
+    }
+    .part {
+      height: 1px;
+      width: 10px;
+      background-color: #fff;
+      position: absolute;
+      &-1 {
+        transform: rotate(-45deg);
+        top: 18px;
+        left: 12px;
+      }
+      &-2 {
+        transform: rotate(45deg);
+        top: 18px;
+        right: 11px;
+      }
+    }
+  }
+  form {
+    width: 100%;
+    margin: 0;
+    p {
+      margin: 0;
+      @media screen and (max-width: 1100px) {
+        margin: 0px -15px;
+      }
+    }
+    input {
+      height: 37px;
+      width: 100%;
+      font-size: 15px;
+      color: #463d3d;
+      font-family: Poppins;
+      border-radius: 5px;
+    }
   }
 }
