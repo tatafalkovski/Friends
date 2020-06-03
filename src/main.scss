@@ -379,33 +379,41 @@ a {
   .d-table {
     width: 100%;
     border-collapse: collapse;
-    .table-body {
-      .d-tr {
-        background-color: #f44a4f;
-        border-radius: 50px;
-        .d-td {
-          background-color: #ffffff;
-          border-radius: 30px;
-          display: flex;
-          p {
-            margin: 0;
-          }
-          .td-total {
-            display: flex;
-          }
-        }
-      }
-    }
-    .d-tr {
+    .table-row {
+      border-radius: 50px;
       display: flex;
+      justify-content: space-between;
+      align-items: center;
       height: 59px;
-      border-radius: 30px;
       margin-top: 20px;
-      .d-td {
+      padding-left: 10px;
+      padding-right: 10px;
+      &-head {
+        align-items: flex-end;
+      }
+      &-red {
+        background-color: #f44a4f;
+      }
+      &-blue {
+        background-color: #25c3f2;
+      }
+      &-yellow {
+        background-color: #ffc544;
+      }
+      .table-data {
+        background-color: #ffffff;
+        border-radius: 30px;
+        display: flex;
         text-align: center;
         border: none;
-        vertical-align: middle;
+        &-head {
+        }
+        &-total {
+          align-items: center;
+          padding-left: 10px;
+        }
         p {
+          margin: 0;
           font-family: Poppins;
           background-color: #ffffff;
           padding: 6px 15px;
@@ -413,6 +421,8 @@ a {
           color: #373258;
           font-weight: 500;
           font-size: 13px;
+          display: flex;
+          align-items: center;
         }
         .title {
           font-style: normal;
@@ -422,33 +432,14 @@ a {
           text-align: center;
           color: #9693a8;
         }
+
         .head-icon {
           img {
             width: 32px;
             border-radius: 20px;
             box-shadow: 0px 5px 10px rgba(26, 30, 56, 0.2);
           }
-          p {
-            font-family: Poppins;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 13px;
-            line-height: 20px;
-            align-items: baseline;
-            text-align: center;
-            color: #9693a8;
-            vertical-align: bottom;
-          }
         }
-      }
-      &.red {
-        background-color: #f44a4f;
-      }
-      &.blue {
-        background-color: #25c3f2;
-      }
-      &.yellow {
-        background-color: #ffc544;
       }
     }
   }
