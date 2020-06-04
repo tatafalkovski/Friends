@@ -374,6 +374,16 @@ a {
     background: #e7e7f0;
     height: 5px;
     width: 50%;
+    &-left {
+      @media screen and (max-width: 1100px) {
+        margin-left: -50px;
+      }
+    }
+    &-right {
+      @media screen and (max-width: 1100px) {
+        margin-right: -50px;
+      }
+    }
   }
   .caption {
     margin: 0 10px;
@@ -608,19 +618,18 @@ p.sausage {
   width: 100%;
   background: #f6f6fb;
   border-radius: 24px;
-  max-height: 780px;
   position: relative;
-  margin-top: 30px;
+  margin-top: 40px;
   padding: 13px;
   display: none;
   @media screen and (max-width: 1100px) {
-    display: inline;
+    display: block;
   }
   .small-sausage-season {
     .avatar {
       position: absolute;
-      top: -2px;
-      left: -16px;
+      top: -23px;
+      left: 0px;
       z-index: 1;
     }
     img {
@@ -638,7 +647,6 @@ p.sausage {
     margin-right: -13px;
     margin-top: -13px;
     position: relative;
-    width: 100%;
     &-red {
       background: #f44a4f;
     }
