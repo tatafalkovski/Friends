@@ -1,10 +1,15 @@
+//please move global styles to separate file ex. normalize
 body {
+  //please make variables.scss file and make a variable with colors
+  //please set varibles for colors in variables.scss
   background-color: #0a1d39;
   margin: 0;
   padding: 0;
   position: relative;
   font-size: 14px;
 }
+//please move global styles to separate file ex. normalize
+
 
 * {
   box-sizing: border-box;
@@ -17,6 +22,7 @@ body {
   position: relative;
   // overflow: hidden;
 
+  //please use -- for modifiers
   &-lg {
     width: 100%;
   }
@@ -50,10 +56,12 @@ body {
   position: absolute;
   right: 0;
   bottom: 2330px;
+
   @media screen and (max-width: 1100px) {
     display: none;
   }
 }
+//please move global styles to separate file ex. normalize
 
 ul,
 li {
@@ -61,6 +69,7 @@ li {
   margin: 0;
   padding: 0;
 }
+//please move global styles to separate file ex. normalize
 
 a {
   text-decoration: none;
@@ -75,6 +84,7 @@ a {
   background-size: cover;
 }
 
+//please dont use class head because it recalls with head tag
 .head {
   display: flex;
   justify-content: space-between;
@@ -104,6 +114,7 @@ a {
       margin-left: 0;
       opacity: 0.3;
     }
+    // what means caps? is it a typo?
     .caps {
       position: relative;
       margin-left: 15px;
@@ -120,6 +131,7 @@ a {
 }
 
 .topic {
+  //please make variables.scss file and make a variable with font settings
   font-family: Kaushan Script;
   font-style: normal;
   font-weight: normal;
@@ -137,6 +149,8 @@ a {
 }
 
 .topic-font {
+  //please make variables.scss file and make a variable with font settings
+
   font-family: Kaushan Script;
   font-style: normal;
   font-weight: normal;
@@ -146,6 +160,7 @@ a {
   color: #ffffff;
   @media screen and (max-width: 810px) {
     font-family: Kaushan Script;
+    // please remove duplications of properties
     font-style: normal;
     font-weight: 600;
     font-size: 21px;
@@ -171,6 +186,8 @@ a {
     }
   }
   .caption {
+  //please make variables.scss file and make a variable with font settings
+
     font-family: Kaushan Script;
     font-style: normal;
     font-weight: normal;
@@ -187,6 +204,8 @@ a {
     justify-content: space-around;
     margin-left: -10px;
     margin-right: -10px;
+
+    // please remove comments and unused code
     @media screen and (max-width: 1110px) {
       //   display: initial;
     }
@@ -228,10 +247,13 @@ a {
           }
         }
       }
+      //too much nested levels, you can move .descr element from cascade 
       .descr {
         .name {
           display: flex;
           p {
+  //please make variables.scss file and make a variable with font settings
+
             font-family: Poppins;
             font-style: normal;
             font-weight: normal;
@@ -261,6 +283,7 @@ a {
             }
           }
         }
+        //typo: coffee
         .coffe {
           display: flex;
           p {
@@ -345,6 +368,8 @@ a {
             p {
               color: #ffffff;
               margin: 0;
+  //please make variables.scss file and make a variable with font settings
+
               font-family: Poppins;
               font-style: normal;
               font-weight: 500;
@@ -647,6 +672,8 @@ p.sausage {
     margin-right: -13px;
     margin-top: -13px;
     position: relative;
+  //please use -- for modifiers
+
     &-red {
       background: #f44a4f;
     }
@@ -676,10 +703,14 @@ p.sausage {
     }
   }
   .season {
+  //please make variables.scss file and make a variable with font settings
+
     font-family: Poppins;
     font-weight: bold;
     font-size: 12px;
     text-transform: uppercase;
+  //please use -- for modifiers
+
     &-red {
       p {
         color: #f44a4f;
@@ -712,6 +743,8 @@ p.sausage {
     margin-top: 15px;
     padding: 10px 24px;
     position: relative;
+  //please use -- for modifiers
+
     &-red {
       border: 1px solid #f44a4f;
     }
@@ -730,6 +763,8 @@ p.sausage {
         width: 1px;
         height: 10px;
         position: absolute;
+  //please use -- for modifiers
+
         &-1 {
           transform: rotate(-45deg);
           left: -7px;
@@ -793,6 +828,8 @@ p.sausage {
     padding-top: 26px;
     padding-bottom: 26px;
     padding-right: 22px;
+  //please use -- for modifiers
+
     &-blue {
       background-color: #25c3f2;
     }
@@ -837,6 +874,8 @@ p.sausage {
           font-weight: bold;
           font-size: 14px;
           text-transform: uppercase;
+  //please use -- for modifiers
+
           &-red {
             color: #f44a4f;
           }
@@ -893,6 +932,8 @@ p.sausage {
     width: 100%;
     max-width: 8%;
     text-align: center;
+  //please use -- for modifiers
+
     &-blue {
       background-color: #25c3f2;
     }
@@ -946,6 +987,8 @@ p.sausage {
       padding: 0 12px;
     }
     p {
+  //please make variables.scss file and make a variable with font settings
+
       font-family: Poppins;
       font-size: 16px;
       color: #9693a8;
@@ -1153,6 +1196,7 @@ p.sausage {
       }
     }
   }
+  // modifier --
   .sausage-top {
     margin-bottom: 30px;
   }
@@ -1233,6 +1277,7 @@ footer {
           margin-bottom: 10px;
         }
       }
+      // please remove empty blocks
       .write-up {
       }
     }
@@ -1361,6 +1406,7 @@ footer {
       }
     }
   }
+  //please give a form some class ,don't apply styles to tags
   form {
     width: 100%;
     margin: 0;
